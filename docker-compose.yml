@@ -1,0 +1,11 @@
+services:
+  bot:
+    build: .
+    container_name: tgs-bot
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+    # Mini-app server; bound to localhost for a reverse proxy on the host.
+    ports:
+      - "127.0.0.1:8080:8080"

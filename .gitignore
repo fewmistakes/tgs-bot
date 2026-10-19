@@ -1,0 +1,23 @@
+# secrets
+.env
+
+# runtime data: SQLite databases, uploads, render output, font cache
+data/*
+!data/.gitkeep
+!data/tmp/
+data/tmp/*
+!data/tmp/.gitkeep
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ruff_cache/
+
+# editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
